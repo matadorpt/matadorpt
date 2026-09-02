@@ -1,25 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice Name | Physical Therapy & Performance</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex PT — Physical Therapy & Performance</title>
+  <meta name="description" content="Apex Physical Therapy — personalized 1-on-1 rehabilitation and athletic training to get you out of pain and back to what you love." />
+  <link rel="canonical" href="https://yourdomain.com/" />
+  <meta name="theme-color" content="#2563EB" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Apex Physical Therapy — Physical Therapy & Performance" />
+  <meta property="og:description" content="Personalized physical therapy and athletic training to help you overcome injury and perform at your best." />
+  <!-- Replace with a real image URL -->
+  <meta property="og:image" content="https://yourdomain.com/assets/og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@yourhandle" />
+  <meta name="twitter:title" content="Apex Physical Therapy" />
+  <meta name="twitter:description" content="Personalized 1-on-1 rehabilitation and athletic training." />
+  <meta name="twitter:image" content="https://yourdomain.com/assets/og-image.jpg" />
+
+  <!-- Favicon / icons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Production note: build Tailwind locally and link the compiled CSS (recommended). -->
+  <!-- Example compiled stylesheet -->
+  <!-- <link rel="stylesheet" href="/dist/styles.css"> -->
+
+  <!-- Quick dev option: Tailwind CDN (not recommended for production) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Accessibility: respect reduced motion -->
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      :root { scroll-behavior: auto; }
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+
+  <!-- Structured data: LocalBusiness / MedicalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Apex Physical Therapy",
+    "url": "https://yourdomain.com/",
+    "logo": "https://yourdomain.com/assets/logo.png",
+    "telephone": "+15550192834",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Health Ave, Suite 100",
+      "addressLocality": "YourCity",
+      "addressRegion": "YourState",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
 
+  <!-- Skip link for keyboard users -->
+  <a href="#maincontent" class="sr-only focus:not-sr-only focus:top-4 fixed left-4 z-50 rounded bg-white px-3 py-2 border shadow">
+    Skip to content
+  </a>
+
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#home" class="font-bold text-xl tracking-tight text-slate-900">Apex<span class="text-blue-600">PT</span></a>
-      <nav class="flex items-center space-x-6 text-sm font-medium">
-        <a href="#home" class="hover:text-blue-600 transition">Home</a>
-        <a href="#services" class="hover:text-blue-600 transition">Services</a>
-        <a href="#booking" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Book Now</a>
+      <a href="#home" class="font-bold text-xl tracking-tight text-slate-900 flex items-center gap-2" aria-label="Apex Physical Therapy Home">
+        <!-- Replace with an inline SVG or image logo (include alt when using <img>) -->
+        Apex<span class="text-blue-600">PT</span>
+      </a>
+
+      <nav class="flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Primary">
+        <a href="#home" class="hover:text-blue-600 transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Home</a>
+        <a href="#services" class="hover:text-blue-600 transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Services</a>
+        <a href="#booking" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition focus:outline focus:outline-2 focus:outline-blue-200" aria-label="Book an appointment">Book Now</a>
       </nav>
     </div>
   </header>
 
-  <main class="flex-grow">
+  <main id="maincontent" class="flex-grow" tabindex="-1">
     <section id="home" class="py-20 md:py-28 px-6 max-w-5xl mx-auto">
       <div class="max-w-2xl">
         <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Evidence-Based Care</span>
@@ -30,8 +96,10 @@
           Personalized, 1-on-1 physical therapy and athletic training tailored to get you out of pain and back to the activities you love.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#booking" class="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">Schedule an Evaluation</a>
-          <a href="#services" class="border border-slate-300 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 transition">View Services</a>
+          <a href="#booking" class="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition focus:outline focus:outline-2 focus:outline-blue-200" aria-label="Schedule an evaluation">
+            Schedule an Evaluation
+          </a>
+          <a href="#services" class="border border-slate-300 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 transition focus:outline focus:outline-2 focus:outline-blue-200">View Services</a>
         </div>
       </div>
     </section>
@@ -42,25 +110,25 @@
           <h2 class="text-3xl font-bold text-slate-900">Our Services</h2>
           <p class="text-slate-600 mt-2">Targeted rehabilitation and training with no fluff.</p>
         </div>
-        
+
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="border border-slate-200 rounded-xl p-6 bg-slate-50">
-            <h3 class="font-bold text-xl mb-2 text-slate-900">Physical Therapy</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-pt">
+            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Physical Therapy</h3>
             <p class="text-slate-600 text-sm mb-4">Comprehensive assessment and hands-on rehabilitation for acute and chronic pain conditions.</p>
             <span class="text-blue-600 font-semibold text-sm">60-Min Sessions</span>
-          </div>
+          </article>
 
-          <div class="border border-slate-200 rounded-xl p-6 bg-slate-50">
-            <h3 class="font-bold text-xl mb-2 text-slate-900">Return-to-Sport</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-rts">
+            <h3 id="service-rts" class="font-bold text-xl mb-2 text-slate-900">Return-to-Sport</h3>
             <p class="text-slate-600 text-sm mb-4">Post-op ACL, shoulder, and knee testing to safely transition athletes back into high-demand competition.</p>
-            <span class="text-blue-600 font-semibold text-sm">Testing & Programming</span>
-          </div>
+            <span class="text-blue-600 font-semibold text-sm">Testing &amp; Programming</span>
+          </article>
 
-          <div class="border border-slate-200 rounded-xl p-6 bg-slate-50">
-            <h3 class="font-bold text-xl mb-2 text-slate-900">Biomechanical Analysis</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-bio">
+            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900">Biomechanical Analysis</h3>
             <p class="text-slate-600 text-sm mb-4">High-speed video assessment of running gait, lifting form, and mobility asymmetries.</p>
             <span class="text-blue-600 font-semibold text-sm">Full Report Included</span>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -69,16 +137,16 @@
       <div class="bg-blue-600 rounded-2xl text-white p-8 md:p-12 shadow-lg">
         <div class="max-w-xl">
           <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
-          <p class="text-blue-100 mb-8">
+          <p class="text-white mb-8">
             Click below to access our scheduling portal, select your preferred time, and fill out your initial paperwork directly.
           </p>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-50 transition">
+          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-50 transition focus:outline focus:outline-2 focus:outline-white" aria-label="Open booking calendar">
             Open Booking Calendar &rarr;
           </a>
         </div>
-        
-        <div class="mt-8 pt-8 border-t border-blue-500 text-sm text-blue-100">
-          <p>Prefer to call or text? Reach us directly at <span class="text-white font-medium">(555) 019-2834</span> or <span class="text-white font-medium">contact@yourdomain.com</span>.</p>
+
+        <div class="mt-8 pt-8 border-t border-blue-500 text-sm">
+          <p>Prefer to call or text? Reach us directly at <a href="tel:+15550192834" class="text-white font-medium underline">(+1) 555-019-2834</a> or <a href="mailto:contact@yourdomain.com" class="text-white font-medium underline">contact@yourdomain.com</a>.</p>
         </div>
       </div>
     </section>
@@ -89,6 +157,10 @@
       &copy; 2026 Apex Physical Therapy. All rights reserved. 123 Health Ave, Suite 100.
     </div>
   </footer>
+
+  <noscript class="block max-w-5xl mx-auto px-6 py-4 text-sm text-yellow-800 bg-yellow-100">
+    JavaScript is disabled in your browser. Some interactive features may not work — to book an appointment, please call <a href="tel:+15550192834">(+1) 555-019-2834</a>.
+  </noscript>
 
 </body>
 </html>
