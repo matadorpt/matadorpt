@@ -60,7 +60,10 @@
     <!-- headers -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#home" class="font-bold text-xl tracking-tight text-slate-900 flex items-center gap-2" aria-label="Matador Physical Therapy & Performance Home"><img src="/path/to/bull-logo.png" alt="Matador bull logo" class="h-8" />/span></a>
+      <a href="#home" class="flex items-center gap-2" aria-label="Matador Physical Therapy & Performance Home">
+        <img src="/assets/bull-logo.png" alt="Matador bull logo" class="h-8" />
+        <img src="/assets/word-logo.png" alt="Matador" class="h-6" />
+      </a>
       <nav class="flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Primary">
         <a href="#home" class="hover:text-blue-600 transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Home</a>
         <a href="#services" class="hover:text-blue-600 transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Services</a>
@@ -68,7 +71,7 @@
         <a href="#insurance" class="hover:text-blue-600 transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Insurance</a>
         <a href="#booking" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition focus:outline focus:outline-2 focus:outline-blue-200" aria-label="Book an appointment">Book Now</a>
         <a href="#contact" class="hover:text-blue-600 transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Contact Us</a>
- </nav>
+      </nav>
     </div>
   </header>
 
@@ -86,8 +89,7 @@
     </section>
 
       <!-- services -->
-    </section>
-      <section id="services" class="py-20 bg-white border-t border-slate-200">
+    <section id="services" class="py-20 bg-white border-t border-slate-200">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center max-w-xl mx-auto mb-12">
           <h2 class="text-3xl font-bold text-slate-900">Our Services</h2>
@@ -113,10 +115,10 @@
             <span class="text-blue-600 font-semibold text-sm">Full Report Included</span>
           </article>
 
-                    <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-bio">
-            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
-            <p class="text-slate-600 text-sm mb-4">Pokey pokey feel better.</p>
-            <span class="text-blue-600 font-semibold text-sm">needle me</span>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-dn">
+            <h3 id="service-dn" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
+            <p class="text-slate-600 text-sm mb-4">Targeted dry needling therapy to reduce pain and improve muscle function.</p>
+            <span class="text-blue-600 font-semibold text-sm">Add-on to Sessions</span>
           </article>
         </div>
       </div>
@@ -130,27 +132,27 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-pt">
-            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Evaluation</h3>
-            <p class="text-slate-600 text-sm mb-4">45 minute one on one evlauation for injury or return to sport.</p>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="price-eval">
+            <h3 id="price-eval" class="font-bold text-xl mb-2 text-slate-900">Evaluation</h3>
+            <p class="text-slate-600 text-sm mb-4">45 minute one on one evaluation for injury or return to sport.</p>
             <span class="text-blue-600 font-semibold text-sm">$185</span>
           </article>
 
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-rts">
-            <h3 id="service-rts" class="font-bold text-xl mb-2 text-slate-900">Recovery Membership</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="price-recovery">
+            <h3 id="price-recovery" class="font-bold text-xl mb-2 text-slate-900">Recovery Membership</h3>
             <p class="text-slate-600 text-sm mb-4">Self serve, 2 times a week, charged monthly</p>
             <span class="text-blue-600 font-semibold text-sm">$100</span>
           </article>
 
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-bio">
-            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900">Biomechanical Analysis</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="price-bio">
+            <h3 id="price-bio" class="font-bold text-xl mb-2 text-slate-900">Biomechanical Analysis</h3>
             <p class="text-slate-600 text-sm mb-4">High-speed video assessment of running gait, lifting form, and mobility asymmetries.</p>
-            <span class="text-blue-600 font-semibold text-sm">$1</span>
+            <span class="text-blue-600 font-semibold text-sm">$150</span>
           </article>
 
-                    <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-bio">
-            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
-            <p class="text-slate-600 text-sm mb-4">Pokey pokey feel better.</p>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="price-needling">
+            <h3 id="price-needling" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
+            <p class="text-slate-600 text-sm mb-4">Targeted dry needling session for pain relief and muscle activation.</p>
             <span class="text-blue-600 font-semibold text-sm">$60</span>
           </article>
         </div>
@@ -165,27 +167,29 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-pt">
-            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Insurance 1</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="insurance-1">
+            <h3 id="insurance-1" class="font-bold text-xl mb-2 text-slate-900">Insurance 1</h3>
           </article>
 
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-pt">
-            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Insurance 2</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="insurance-2">
+            <h3 id="insurance-2" class="font-bold text-xl mb-2 text-slate-900">Insurance 2</h3>
           </article>
 
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-pt">
-            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Insurance 3</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="insurance-3">
+            <h3 id="insurance-3" class="font-bold text-xl mb-2 text-slate-900">Insurance 3</h3>
           </article>
         </div>
       </div>
+    </section>
 
       <!-- booking -->
     <section id="booking" class="py-20 max-w-5xl mx-auto px-6">
       <div class="bg-blue-600 rounded-2xl text-white p-8 md:p-12 shadow-lg">
         <div class="max-w-xl">
           <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
-          <p class="text-white mb-8">fill out blah below with preferred times and contact info and we will get back to you asap</p>
+          <p class="text-white mb-8">Fill out the form below with your preferred times and contact info and we will get back to you ASAP</p>
         </div>
+      </div>
     </section>
 
         <!-- contact -->
@@ -197,6 +201,7 @@
           <p class="text-white mb-8">Address: 1227 N Galleria Dr, Nampa, ID 83687</p>
           <p class="text-white mb-8">Email: info@matadorpt.com</p>
         </div>
+      </div>
     </section>
   </main>
 
