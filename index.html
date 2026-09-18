@@ -346,7 +346,7 @@
       });
 
       document.addEventListener('click', (e) => {
-        if (!menu.classList.contains('hidden') && !menu.contains(e.target)) {
+        if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
           menu.classList.add('hidden');
           btn.setAttribute('aria-expanded', 'false');
         }
