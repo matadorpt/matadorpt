@@ -26,7 +26,6 @@
 
   <!-- Dev fallback: keep CDN during early development (remove in production) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   
 <script>
   tailwind.config = {
@@ -60,25 +59,26 @@
   
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Matador Physical Therapy & Performance",
-    "url": "https://yourdomain.com/",
-    "logo": "https://yourdomain.com/assets/logo.png",
-    "telephone": "+15550192834",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Health Ave, Suite 100",
-      "addressLocality": "YourCity",
-      "addressRegion": "YourState",
-      "postalCode": "12345",
-      "addressCountry": "US"
-    },
-    "priceRange": "$"
-  }
+  "@context": "https://schema.org",
+  "@type": "PhysicalTherapy",
+  "name": "Matador Physical Therapy & Performance",
+  "url": "https://matadorpt.com/",
+  "logo": "https://matadorpt.com/logos/bull-logo.png",
+  "telephone": "+1-208-614-0329",
+  "email": "info@matadorpt.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1227 N Galleria Dr",
+    "addressLocality": "Nampa",
+    "addressRegion": "ID",
+    "postalCode": "83687",
+    "addressCountry": "US"
+  },
+  "priceRange": "$$"
+}
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
 <body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
   
   <a href="#maincontent" class="sr-only focus:not-sr-only focus:top-4 fixed left-4 z-50 rounded bg-white px-3 py-2 border shadow">
@@ -178,8 +178,8 @@
             <p class="text-slate-600 text-sm mb-4">Comprehensive assessments after injury using advanced testing gear, including force plate metrics, designed to get you back to full activity safely and confidently.</p>
           </article>
 
-          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-rts">
-            <h3 id="service-rts" class="font-bold text-xl mb-2 text-slate-900">Recovery</h3>
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50" aria-labelledby="service-recovery">
+            <h3 id="service-recovery" class="font-bold text-xl mb-2 text-slate-900">Recovery</h3>
             <p class="text-slate-600 text-sm mb-4">Modeled after high level training rooms, Matador has the tools to help you recover faster. Available with all Physical Therapy appointments or as a cash-based subscription.</p>
           </article>
 
@@ -262,44 +262,59 @@
     
     <!-- contact -->
     <section id="contact" class="py-20 max-w-5xl mx-auto px-6">
-    <div class="bg-[#c69c6d] text-black rounded-2xl text-black p-8 md:p-12 shadow-lg">
+    <div class="bg-[#c69c6d] rounded-2xl text-black p-8 md:p-12 shadow-lg">
   <div class="max-w-xl">
     <h2 class="text-3xl font-bold mb-6 text-white">Contact Information</h2>
-
-    <div class="space-y-6 text-white">
-      <!-- Phone Block -->
-      <div>
-        <p class="font-medium text-lg">Phone: (208) 614-0329</p>
-        <p class="text-sm opacity-90">Text or Call</p>
-      </div>
-
-      <!-- Address Block -->
-      <div>
-        <p class="font-medium text-lg">Address: 1227 N Galleria Dr, Nampa, ID 83687</p>
-        <p class="text-sm opacity-90">Inside D1 Training Facility</p>
-      </div>
-
-      <!-- Email Block -->
-      <div>
-        <p class="font-medium text-lg">Email: info@matadorpt.com</p>
-      </div>
-
-      <!-- Fax Block -->
-      <div>
-        <p class="font-medium text-lg">Fax: (208) 475-5973</p>
-      </div>
-    </div>
+<div class="space-y-6 text-white">
+  <!-- Phone Block -->
+  <div>
+    <p class="text-sm uppercase tracking-wider opacity-80">Phone</p>
+    <a href="tel:+12086140329" class="font-semibold text-xl hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded">
+      (208) 614-0329
+    </a>
+    <p class="text-xs opacity-80 mt-0.5">Call or Text</p>
   </div>
+
+  <!-- Address Block -->
+  <div>
+    <p class="text-sm uppercase tracking-wider opacity-80">Location</p>
+    <a 
+      href="https://maps.google.com/?q=1227+N+Galleria+Dr,+Nampa,+ID+83687" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded block"
+    >
+      1227 N Galleria Dr, Nampa, ID 83687
+    </a>
+    <p class="text-xs opacity-80 mt-0.5">Located inside D1 Training Facility</p>
+  </div>
+
+  <!-- Email Block -->
+  <div>
+    <p class="text-sm uppercase tracking-wider opacity-80">Email</p>
+    <a href="mailto:info@matadorpt.com" class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded">
+      info@matadorpt.com
+    </a>
+  </div>
+
+  <!-- Fax Block -->
+  <div>
+    <p class="text-sm uppercase tracking-wider opacity-80">Fax</p>
+    <p class="font-semibold text-lg">(208) 475-5973</p>
+  </div>
+
 </div>
     </section>
   </main>
 
-  <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
-    <div class="max-w-5xl mx-auto px-6">&copy; 2026 Matador Physical Therapy & Performance. All rights reserved. 123 Health Ave, Suite 100.</div>
-  </footer>
+ <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+  <div class="max-w-5xl mx-auto px-6">
+    &copy; 2026 Matador Physical Therapy & Performance. All rights reserved. 1227 N Galleria Dr, Nampa, ID 83687.
+  </div>
+</footer>
 
   <noscript class="block max-w-5xl mx-auto px-6 py-4 text-sm text-yellow-800 bg-yellow-100">
-    JavaScript is disabled in your browser. Some interactive features may not work — to book an appointment, please call <a href="tel:+15550192834">(+1) 555-019-2834</a>.
+    JavaScript is disabled in your browser. Some interactive features may not work — to book an appointment, please call <a href="tel:+12086140329">(208)614-0329</a>.
   </noscript>
 <script>
     // Reset scroll to top on reload
