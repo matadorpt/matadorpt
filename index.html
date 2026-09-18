@@ -40,23 +40,23 @@
   }
 </script>
   
-  <style>
-    /* Default body / description font */
-    html, body, p, span, li, input, textarea {
-      font-family: 'Montserrat', system-ui, -apple-system, sans-serif !important;
-    }
+ <style>
+  /* Base font for paragraphs and descriptions */
+  html, body, p, span, li, input, textarea {
+    font-family: 'Montserrat', sans-serif !important;
+  }
 
-    /* Brand Header Font */
-    h1, h2, h3, h4, h5, h6, nav a {
-      font-family: 'Cinzel', serif !important;
-      letter-spacing: 0.04em; /* Cinzel looks best with slight tracking */
-    }
+  /* Header & Navigation Font (Includes Mobile Dropdown Links) */
+  h1, h2, h3, h4, h5, h6, nav a, #mobile-menu a {
+    font-family: 'Cinzel', serif !important;
+    letter-spacing: 0.04em;
+  }
 
-    @media (prefers-reduced-motion: reduce) {
-      :root { scroll-behavior: auto; }
-      * { animation: none !important; transition: none !important; }
-    }
-  </style>
+  @media (prefers-reduced-motion: reduce) {
+    :root { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
   
   <script type="application/ld+json">
   {
@@ -301,6 +301,18 @@
   <noscript class="block max-w-5xl mx-auto px-6 py-4 text-sm text-yellow-800 bg-yellow-100">
     JavaScript is disabled in your browser. Some interactive features may not work — to book an appointment, please call <a href="tel:+15550192834">(+1) 555-019-2834</a>.
   </noscript>
-
+<script>
+    // Reset scroll to top on reload
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('beforeunload', () => {
+      window.scrollTo(0, 0);
+    });
+    // Strip hash fragment on refresh if needed
+    if (window.location.hash) {
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+  </script>
 </body>
 </html>
