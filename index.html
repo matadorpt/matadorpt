@@ -27,7 +27,18 @@
   <link rel="stylesheet" href="/dist/styles.css" />
   <!-- Dev fallback: keep CDN during early development (remove in production) -->
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Cinzel', 'serif'],
+        },
+      },
+    },
+  }
+</script>
   <style>
     @media (prefers-reduced-motion: reduce) {
       :root { scroll-behavior: auto; }
