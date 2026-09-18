@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -37,7 +37,18 @@
   }
 </script>
   
-<style>
+  <style>
+    /* Default body / description font */
+    html, body, p, span, li, input, textarea {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    }
+
+    /* Brand Header Font */
+    h1, h2, h3, h4, h5, h6, nav a {
+      font-family: 'Cinzel', serif !important;
+      letter-spacing: 0.04em; /* Cinzel looks best with slight tracking */
+    }
+
     @media (prefers-reduced-motion: reduce) {
       :root { scroll-behavior: auto; }
       * { animation: none !important; transition: none !important; }
