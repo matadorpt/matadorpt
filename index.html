@@ -264,35 +264,44 @@
     <h2 class="text-3xl font-bold mb-6 text-white">Contact Information</h2>
 <div class="space-y-6 text-white">
   <!-- Phone Block -->
-  <div>
-    <p class="text-sm uppercase tracking-wider opacity-80">Phone</p>
-    <a href="tel:+12086140329" class="font-semibold text-xl hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded">
-      (208)614-0329
-    </a>
-    <p class="text-xs opacity-80 mt-0.5">Call or Text</p>
-  </div>
+<div>
+  <p class="text-sm uppercase tracking-wider opacity-80">Phone</p>
+  <a 
+    href="tel:+12086140329" 
+    onclick="return confirm('Would you like to call or text (208) 614-0329?');"
+    class="font-semibold text-xl hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded"
+  >
+    (208) 614-0329
+  </a>
+  <p class="text-xs opacity-80 mt-0.5">Call or Text</p>
+</div>
 
-  <!-- Address Block -->
-  <div>
-    <p class="text-sm uppercase tracking-wider opacity-80">Location</p>
-    <a 
-      href="https://maps.google.com/?q=1227+N+Galleria+Dr,+Nampa,+ID+83687" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded block"
-    >
-      1227 N Galleria Dr, Nampa, ID 83687
-    </a>
-    <p class="text-xs opacity-80 mt-0.5">Located inside D1 Training Facility</p>
-  </div>
+<!-- Address Block -->
+<div>
+  <p class="text-sm uppercase tracking-wider opacity-80">Location</p>
+  <a  
+    href="https://maps.google.com/?q=1227+N+Galleria+Dr,+Nampa,+ID+83687" 
+    onclick="return confirm('Would you like to open this address in Google Maps?');"
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded block"
+  >
+    1227 N Galleria Dr, Nampa, ID 83687
+  </a>
+  <p class="text-xs opacity-80 mt-0.5">Located inside D1 Training Facility</p>
+</div>
 
   <!-- Email Block -->
-  <div>
-    <p class="text-sm uppercase tracking-wider opacity-80">Email</p>
-    <a href="mailto:info@matadorpt.com" class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded">
-      info@matadorpt.com
-    </a>
-  </div>
+<div>
+  <p class="text-sm uppercase tracking-wider opacity-80">Email</p>
+  <a 
+    href="mailto:info@matadorpt.com" 
+    onclick="return confirm('Would you like to open your email app to send a message to info@matadorpt.com?');"
+    class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded"
+  >
+    info@matadorpt.com
+  </a>
+</div>
 
   <!-- Fax Block -->
   <div>
