@@ -79,32 +79,60 @@
   </script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
-
+<body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+  
   <a href="#maincontent" class="sr-only focus:not-sr-only focus:top-4 fixed left-4 z-50 rounded bg-white px-3 py-2 border shadow">
     Skip to content
   </a>
 
     <!-- headers -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2" aria-label="Matador Physical Therapy & Performance Home">
-        <img src="logos/bull-logo.png" alt="bull logo" class="h-10" />
-        <img src="logos/word-logo.jpg" alt="word logo" class="h-8" />
-      </a>
-      <nav class="flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Primary">
-        <a href="#home" class="transition hover:bg-[#c69c6d] focus:outline focus:outline-2 focus:outline-black rounded">Home</a>
-        <a href="#services" class="transition hover:bg-[#c69c6d] focus:outline focus:outline-2 focus:outline-black rounded">Services</a>
-        <a href="#pricing" class="transition hover:bg-[#c69c6d] focus:outline focus:outline-2 focus:outline-black rounded">Cash Pricing</a>
-        <a href="#insurance" class="transition hover:bg-[#c69c6d] focus:outline focus:outline-2 focus:outline-black rounded">Insurance</a>
-        <a href="#about" class="transition hover:bg-[#c69c6d] focus:outline focus:outline-2 focus:outline-black rounded">About Us</a>
-        <a href="#contact" class="transition hover:bg-[#c69c6d] focus:outline focus:outline-2 focus:outline-black rounded">Contact Us</a>
-      </nav>
-    </div>
-  </header>
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="#top" class="flex items-center gap-2" aria-label="Matador Physical Therapy & Performance Home">
+      <img src="logos/bull-logo.png" alt="bull logo" class="h-10" />
+      <img src="logos/word-logo.jpg" alt="word logo" class="h-8 mix-blend-multiply" />
+    </a>
+
+    <!-- Desktop Navigation (Hidden on Mobile) -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Primary">
+      <a href="#top" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Home</a>
+      <a href="#services" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Services</a>
+      <a href="#pricing" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Cash Pricing</a>
+      <a href="#insurance" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Insurance</a>
+      <a href="#about" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">About Us</a>
+      <a href="#contact" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-blue-200 rounded">Contact Us</a>
+    </nav>
+
+    <!-- Mobile Hamburger Button (Visible only on Mobile) -->
+    <button 
+      id="menu-btn" 
+      class="md:hidden p-2 text-slate-700 hover:text-black focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+    >
+      <!-- 3-line hamburger icon -->
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
+    <a href="#top" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Home</a>
+    <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Services</a>
+    <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Cash Pricing</a>
+    <a href="#insurance" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Insurance</a>
+    <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">About Us</a>
+    <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Contact Us</a>
+  </div>
+</header>
 
   <main id="maincontent" class="flex-grow" tabindex="-1">
-    <section id="home" class="pt-6 md:pt-8 pb-20 md:pb-28 px-6 max-w-5xl mx-auto">
-      <div class="flex flex-wrap gap-4 justify-center">
+    <section id="home" class="pt-6 md:pt-8 pb-10 md:pb-12 px-6 max-w-5xl mx-auto">
+  <div class="flex flex-wrap gap-4 justify-center">
       <h1 class="flex flex-col justify-center items-center gap-3 md:gap-4 w-full max-w-4xl mx-auto px-4">
   <!-- Bull Logo: Responsively scales, never exceeds 35% of the mobile screen height -->
         <img 
