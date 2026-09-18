@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matador Physical Therapy & Performance</title>
+  <meta name="description" content="Matador Physical Therapy & Performance — Rehabilitation built on performance." />
+  <link rel="canonical" href="https://matadorpt.com/" />
+  <meta name="theme-color" content="#2563EB" />
+
+    <!-- add cinzel/montesserat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Matador Physical Therapy & Performance" />
+<meta property="og:description" content="Rehabilitation built on performance. Personalized physical therapy and athletic training." />
+<meta property="og:image" content="https://matadorpt.com/logos/bull-logo.png" />
+<meta property="og:url" content="https://matadorpt.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Dev fallback: keep CDN during early development (remove in production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Cinzel', 'serif'],
+        },
+      },
+    },
+  }
+</script>
+  
+ <style>
+  /* Base font for paragraphs and descriptions */
+  html, body, p, span, li, input, textarea {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  /* Header & Navigation Font (Includes Mobile Dropdown Links) */
+  h1, h2, h3, h4, h5, h6, nav a, #mobile-menu a {
+    font-family: 'Cinzel', serif !important;
+    letter-spacing: 0.04em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+  
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "PhysicalTherapy",
+  "name": "Matador Physical Therapy & Performance",
+  "url": "https://matadorpt.com/",
+  "logo": "https://matadorpt.com/logos/bull-logo.png",
+  "telephone": "+1-208-614-0329",
+  "email": "info@matadorpt.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1227 N Galleria Dr",
+    "addressLocality": "Nampa",
+    "addressRegion": "ID",
+    "postalCode": "83687",
+    "addressCountry": "US"
+  },
+  "priceRange": "$$"
+}
+  </script>
+</head>
+
+<body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+  
+  <a href="#maincontent" class="sr-only focus:not-sr-only focus:top-4 fixed left-4 z-50 rounded bg-white px-3 py-2 border shadow">
+    Skip to content
+  </a>
+
+    <!-- headers -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="#top" class="flex items-center gap-2 shrink-0" aria-label="Matador Physical Therapy & Performance Home">
+      <img src="logos/bull-logo.png" alt="Matador logo" class="h-10 w-auto" />
+      <img src="logos/word-logo.jpg" alt="Matador logo" class="h-8 w-auto mix-blend-multiply" />
+    </a>
+
+   <!-- Desktop Navigation (Hidden on Phones AND Tablets, shows on large desktop screens) -->
+    <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Primary">
+      <a href="#top" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Home</a>
+      <a href="#services" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Services</a>
+      <a href="#pricing" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Cash Pricing</a>
+      <a href="#insurance" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Insurance</a>
+      <a href="#about" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">About Us</a>
+      <a href="#contact" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Contact Us</a>
+    </nav>
+
+    <!-- Mobile Hamburger Button (Visible on all phones and tablets) -->
+    <button 
+      id="menu-btn" 
+      type="button"
+      class="lg:hidden p-2 text-slate-700 hover:text-black focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded cursor-pointer"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 shadow-lg">
+    <a href="#top" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Home</a>
+    <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Services</a>
+    <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Cash Pricing</a>
+    <a href="#insurance" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Insurance</a>
+    <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">About Us</a>
+    <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Contact Us</a>
+  </div>
+</header>
+  
+  <main id="maincontent" class="flex-grow" tabindex="-1">
+    <section id="home" class="pt-6 md:pt-8 pb-10 md:pb-12 px-6 max-w-5xl mx-auto">
+    <div class="flex flex-wrap gap-4 justify-center">
+      <h1 class="flex flex-col justify-center items-center gap-3 md:gap-4 w-full max-w-4xl mx-auto px-4">
+  <!-- Bull Logo: Responsively scales, never exceeds 35% of the mobile screen height -->
+        <img 
+          src="logos/bull-logo.png" 
+          alt="Matador bull logo" 
+          class="w-auto h-36 sm:h-52 md:h-64 lg:h-80 max-h-[35vh] object-contain" 
+        />
+  <!-- Wordmark Logo: 100% fluid width on phones, capped on desktops -->
+        <img 
+          src="logos/word-logo.jpg" 
+          alt="Matador Physical Therapy & Performance" 
+          class="w-full max-w-sm sm:max-w-xl md:max-w-3xl h-auto object-contain mix-blend-multiply" 
+        />
+      </h1>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="bg-[#c69c6d] text-white font-medium px-6 py-3 rounded-lg hover:bg-black hover:text-white transition focus:outline focus:outline-2 focus:outline-black" aria-label="Schedule an evaluation">Schedule an Evaluation</a>
+          <a href="#services" class="border border-slate-300 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 transition focus:outline focus:outline-2 focus:outline-[#c69c6d]">View Services</a>
+        </div>
+      </div>
+    </section>
+
+      <!-- services -->
+    <section id="services" class="py-20 bg-white border-t border-slate-200 scroll-mt-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-slate-900">What We Offer</h2>
+          <p class="text-slate-600 mt-2">Rehabilitation built on performance.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="service-pt">
+            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Physical Therapy</h3>
+            <p class="text-slate-600 text-sm mb-4">1-on-1 sessions with a Doctor of Physical Therapy tailored to you and the specific demands of your sport, recreation, or regular activity.</p>
+          </article>
+    
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="service-bio">
+            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900">Athletic Screening</h3>
+            <p class="text-slate-600 text-sm mb-4">Whether it's preseason, postseason, or in season, a dual-credentialed Doctor of Physical Therapy and Strength and Conditioning Specialist can help you identify key performance indicators and achieve your best results.</p>
+          </article>
+          
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="service-rts">
+            <h3 id="service-rts" class="font-bold text-xl mb-2 text-slate-900">Return-to-Sport</h3>
+            <p class="text-slate-600 text-sm mb-4">Comprehensive assessments after injury using advanced testing gear, including force plate metrics, designed to get you back to full activity safely and confidently.</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="service-recovery">
+            <h3 id="service-recovery" class="font-bold text-xl mb-2 text-slate-900">Recovery</h3>
+            <p class="text-slate-600 text-sm mb-4">Modeled after high level training rooms, Matador has the tools to help you recover faster. Available with all Physical Therapy appointments or as a cash-based subscription.</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="service-dn">
+            <h3 id="service-dn" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
+            <p class="text-slate-600 text-sm mb-4">Manage pain better with dry needling to get you back to activity faster than ever. Available with all Physical Therapy appointments or as a standalone cash-based service.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+      <!-- prices -->
+    <section id="pricing" class="py-20 bg-slate-50 border-t border-slate-200 scroll-mt-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-slate-900">Cash Pricing</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="border border-slate-200 rounded-xl p-6 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="price-eval">
+            <h3 id="price-eval" class="font-bold text-xl mb-2 text-slate-900">Evaluation</h3>
+            <p class="text-slate-600 text-sm mb-4">45-minute 1-on-1 assessment. Available for Physical Therapy, Return-to-Sport, and Athletic Screening.</p>
+            <span class="text-[#c69c6d] font-semibold text-sm">$155</span>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="price-bio">
+            <h3 id="price-bio" class="font-bold text-xl mb-2 text-slate-900">Physical Therapy Appointment</h3>
+            <p class="text-slate-600 text-sm mb-4">45-minute 1-on-1 sessions. Evaluation needed.</p>
+            <span class="text-[#c69c6d] font-semibold text-sm">$125</span>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="price-recovery">
+            <h3 id="price-recovery" class="font-bold text-xl mb-2 text-slate-900">Recovery Membership</h3>
+            <p class="text-slate-600 text-sm mb-4">Use Normatec compression or MarcPro electrical stimulation to improve your recovery. 8 20-minute sessions per calendar month, charged monthly.</p>
+            <span class="text-[#c69c6d] font-semibold text-sm">$100</span>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="price-needling">
+            <h3 id="price-needling" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
+            <p class="text-slate-600 text-sm mb-4">20-30-minute sessions, personalized to your needs. Evaluation needed.</p>
+            <span class="text-[#c69c6d] font-semibold text-sm">$60</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+      <!-- insurance -->
+  <section id="insurance" class="py-20 bg-white border-t border-slate-200 scroll-mt-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <h2 class="text-3xl font-bold text-slate-900">We Currently Accept the Following Insurances</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="insurance-1">
+            <h3 id="insurance-1" class="font-bold text-xl mb-2 text-slate-900">Insurance 1</h3>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="insurance-2">
+            <h3 id="insurance-2" class="font-bold text-xl mb-2 text-slate-900">Insurance 2</h3>
+          </article>
+
+          <article class="border border-slate-200 rounded-xl p-6 bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300" aria-labelledby="insurance-3">
+            <h3 id="insurance-3" class="font-bold text-xl mb-2 text-slate-900">Insurance 3</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- about me -->
+  <section id="about" class="py-20 bg-white border-t border-slate-200 scroll-mt-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="max-w-xl">
+          <h2 class="text-3xl font-bold mb-4">About Us</h2>
+          <p class="text-slate-600">I is colby</p>
+          <p class="text-slate-600">add pic</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- contact -->
+    <section id="contact" class="py-20 max-w-5xl mx-auto px-6 scroll-mt-20">
+    <div class="bg-[#c69c6d] rounded-2xl p-8 md:p-12 shadow-lg">
+  <div class="max-w-xl">
+    <h2 class="text-3xl font-bold mb-6 text-white">Contact Information</h2>
+<div class="space-y-6 text-white">
+  <!-- Phone Block -->
+<div>
+  <p class="text-sm uppercase tracking-wider opacity-80">Phone</p>
+  <a 
+    href="tel:+12086140329" 
+    onclick="return confirm('Would you like to call or text (208) 614-0329?');"
+    class="font-semibold text-xl hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded"
+  >
+    (208) 614-0329
+  </a>
+  <p class="text-xs opacity-80 mt-0.5">Call or Text</p>
+</div>
+
+<!-- Address Block -->
+<div>
+  <p class="text-sm uppercase tracking-wider opacity-80">Location</p>
+  <a  
+    href="https://maps.google.com/?q=1227+N+Galleria+Dr,+Nampa,+ID+83687" 
+    onclick="return confirm('Would you like to open this address in Google Maps?');"
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded block"
+  >
+    1227 N Galleria Dr, Nampa, ID 83687
+  </a>
+  <p class="text-xs opacity-80 mt-0.5">Located inside D1 Training Facility</p>
+</div>
+
+  <!-- Email Block -->
+<div>
+  <p class="text-sm uppercase tracking-wider opacity-80">Email</p>
+  <a 
+    href="mailto:info@matadorpt.com" 
+    onclick="return confirm('Would you like to open your email app to send a message to info@matadorpt.com?');"
+    class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded"
+  >
+    info@matadorpt.com
+  </a>
+</div>
+
+  <!-- Fax Block -->
+  <div>
+    <p class="text-sm uppercase tracking-wider opacity-80">Fax</p>
+    <p class="font-semibold text-lg">(208) 475-5973</p>
+  </div>
+</div>
+</div>
+    </section>
+  </main>
+
+ <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+  <div class="max-w-5xl mx-auto px-6">
+    &copy; 2026 Matador Physical Therapy & Performance. All rights reserved. 1227 N Galleria Dr, Nampa, ID 83687.
+  </div>
+</footer>
+
+  <noscript class="block max-w-5xl mx-auto px-6 py-4 text-sm text-yellow-800 bg-yellow-100">
+    JavaScript is disabled in your browser. Some interactive features may not work — to book an appointment, please call <a href="tel:+12086140329">(208)614-0329</a>.
+  </noscript>
+<script>
+    // Reset scroll to top on reload
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('beforeunload', () => {
+      window.scrollTo(0, 0);
+    });
+    if (window.location.hash) {
+      window.history.replaceState(null, null, window.location.pathname);
+    }
+
+    // Robust Mobile Navigation Logic
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('menu-btn');
+
+    if (btn && menu) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.focus();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
