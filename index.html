@@ -106,19 +106,16 @@
 
     <!-- Mobile Hamburger Button (Visible only on Mobile) -->
     <button 
-      id="menu-btn" 
-      class="md:hidden p-2 text-slate-700 hover:text-black focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded"
-      aria-label="Toggle navigation menu"
-      aria-expanded="false"
-      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-    >
-      <!-- 3-line hamburger icon -->
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-
+  id="menu-btn" 
+  class="md:hidden p-2 text-slate-700 hover:text-black focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded"
+  aria-label="Toggle navigation menu"
+  aria-expanded="false"
+>
+  <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+    
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3">
     <a href="#top" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Home</a>
@@ -324,18 +321,36 @@
     window.addEventListener('beforeunload', () => {
       window.scrollTo(0, 0);
     });
-    // Strip hash fragment on refresh if needed
     if (window.location.hash) {
       window.history.replaceState(null, null, window.location.pathname);
     }
-  // Close mobile menu on outside click
-  document.addEventListener('click', (e) => {
+
+    // Robust Mobile Navigation Logic
     const menu = document.getElementById('mobile-menu');
     const btn = document.getElementById('menu-btn');
-    if (!menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
-      menu.classList.add('hidden');
+
+    if (btn && menu) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('hidden') && !menu.contains(e.target)) {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.focus();
+        }
+      });
     }
-  });
   </script>
 </body>
 </html>
