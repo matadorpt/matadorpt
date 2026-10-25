@@ -29,7 +29,6 @@
   
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -78,155 +77,120 @@
   </script>
 </head>
 
-<body id="top" class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased font-sans flex flex-col min-h-screen transition-colors duration-200">
+<body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
   
   <a href="#maincontent" class="sr-only focus:not-sr-only focus:top-4 fixed left-4 z-50 rounded bg-white px-3 py-2 border shadow">
     Skip to content
   </a>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800 w-full transition-colors duration-200">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200 w-full">
     <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
       <!-- Brand Logo -->
       <a href="#top" class="flex items-center gap-2 shrink-0" aria-label="Matador Physical Therapy & Performance Home">
         <img src="logos/bull-logo.png" alt="Matador logo" class="h-10 w-auto" />
-        <img src="logos/word-logo.jpg" alt="Matador logo" class="h-8 w-auto mix-blend-multiply dark:invert" />
+        <img src="logos/word-logo.jpg" alt="Matador logo" class="h-8 w-auto mix-blend-multiply" />
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center justify-between w-full ml-6 space-x-2 xl:space-x-4 text-xs xl:text-sm font-medium whitespace-nowrap" role="navigation" aria-label="Primary">
-        <a href="#top" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Home</a>
-        <a href="#services" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Services</a>
-        <a href="#brain" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Concussion</a>
-        <a href="#pricing" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Cash Pricing</a>
-        <a href="#insurance" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Insurance</a>
-        <a href="#about" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">About Us</a>
-        <a href="#contact" class="hover:text-[#c69c6d] dark:hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Contact Us</a>
-        <a href="#book" class="hover:text-[black] hover:bg-[#c69c6d] dark:hover:text-black transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded px-2 py-1">Book Now</a>
-
-        <!-- Desktop Theme Toggle Button -->
-        <button 
-          id="theme-toggle" 
-          type="button" 
-          class="p-2 text-slate-700 dark:text-yellow-400 hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded cursor-pointer"
-          aria-label="Toggle dark mode"
-        >
-          <svg id="theme-toggle-sun-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-4.22-7.78l1.42-1.42M4.22 19.78l1.42-1.42"></path>
-          </svg>
-          <svg id="theme-toggle-moon-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-          </svg>
-        </button>
+        <a href="#top" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Home</a>
+        <a href="#services" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Services</a>
+        <a href="#brain" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Concussion</a>
+        <a href="#pricing" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Cash Pricing</a>
+        <a href="#insurance" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Insurance</a>
+        <a href="#about" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">About Us</a>
+        <a href="#contact" class="hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded">Contact Us</a>
+        <a href="#book" class="hover:text-[black] hover:bg-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded px-2 py-1">Book Now</a>
       </nav>
 
-      <!-- Mobile Right Controls (Toggle + Menu Button) -->
-      <div class="flex items-center gap-2 lg:hidden">
-        <!-- Mobile Theme Toggle Button -->
-        <button 
-          id="theme-toggle-mobile" 
-          type="button" 
-          class="p-2 text-slate-700 dark:text-yellow-400 hover:text-[#c69c6d] transition focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded cursor-pointer"
-          aria-label="Toggle dark mode"
-        >
-          <svg class="sun-icon-m hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2m-4.22-7.78l1.42-1.42M4.22 19.78l1.42-1.42"></path>
-          </svg>
-          <svg class="moon-icon-m w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-          </svg>
-        </button>
-
-        <!-- Mobile Hamburger Button -->
-        <button 
-          id="menu-btn" 
-          type="button"
-          class="p-2 text-slate-700 dark:text-slate-200 hover:text-black dark:hover:text-white focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded cursor-pointer"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
+      <!-- Mobile Hamburger Button -->
+      <button 
+        id="menu-btn" 
+        type="button"
+        class="lg:hidden p-2 text-slate-700 hover:text-black focus:outline focus:outline-2 focus:outline-[#c69c6d] rounded cursor-pointer"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 space-y-3 shadow-lg w-full transition-colors duration-200">
-      <a href="#top" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Home</a>
-      <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Services</a>
-      <a href="#brain" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Concussion</a>
-      <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Cash Pricing</a>
-      <a href="#insurance" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Insurance</a>
-      <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">About Us</a>
-      <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Contact Us</a>
-      <a href="#book" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 dark:text-slate-200 font-medium py-1 hover:text-[#c69c6d]">Book Now</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 shadow-lg w-full">
+      <a href="#top" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Home</a>
+      <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Services</a>
+      <a href="#brain" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Concussion</a>
+      <a href="#pricing" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Cash Pricing</a>
+      <a href="#insurance" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Insurance</a>
+      <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">About Us</a>
+      <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Contact Us</a>
+      <a href="#book" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-800 font-medium py-1 hover:text-[#c69c6d]">Book Now</a>
     </div>
   </header>
   
   <main id="maincontent" class="flex-grow w-full" tabindex="-1">
     
     <!-- Home / Hero Section -->
-    <section id="home" class="w-full bg-slate-50 dark:bg-slate-950 pt-6 md:pt-8 pb-10 md:pb-12 transition-colors duration-200">
+    <section id="home" class="w-full bg-slate-50 pt-6 md:pt-8 pb-10 md:pb-12">
       <div class="max-w-5xl mx-auto px-6">
         <div class="flex flex-wrap gap-4 justify-center">
           <h1 class="flex flex-col justify-center items-center gap-3 md:gap-4 w-full max-w-4xl mx-auto px-4">
             <img src="logos/bull-logo.png" alt="Matador bull logo" class="w-auto h-36 sm:h-52 md:h-64 lg:h-80 max-h-[35vh] object-contain" />
-            <img src="logos/word-logo.jpg" alt="Matador Physical Therapy & Performance" class="w-full max-w-sm sm:max-w-xl md:max-w-3xl h-auto object-contain mix-blend-multiply dark:invert" />
+            <img src="logos/word-logo.jpg" alt="Matador Physical Therapy & Performance" class="w-full max-w-sm sm:max-w-xl md:max-w-3xl h-auto object-contain mix-blend-multiply" />
           </h1>
           <div class="flex flex-wrap gap-4 justify-center pt-4">
-            <a href="#contact" class="bg-[#c69c6d] text-white font-medium px-6 py-3 rounded-lg hover:bg-black dark:hover:bg-slate-800 hover:text-white transition focus:outline focus:outline-2 focus:outline-black" aria-label="Schedule an evaluation">Schedule an Evaluation</a>
-            <a href="#services" class="border border-slate-300 dark:border-slate-700 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 transition focus:outline focus:outline-2 focus:outline-[#c69c6d]">View Services</a>
+            <a href="#contact" class="bg-[#c69c6d] text-white font-medium px-6 py-3 rounded-lg hover:bg-black hover:text-white transition focus:outline focus:outline-2 focus:outline-black" aria-label="Schedule an evaluation">Schedule an Evaluation</a>
+            <a href="#services" class="border border-slate-300 font-medium px-6 py-3 rounded-lg hover:bg-slate-100 transition focus:outline focus:outline-2 focus:outline-[#c69c6d]">View Services</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="w-full py-12 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">
+    <section id="services" class="w-full py-12 bg-white border-t border-slate-200 scroll-mt-20">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center max-w-xl mx-auto mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">What We Offer</h2>
-          <p class="text-slate-600 dark:text-slate-400 mt-2">Rehabilitation built on performance.</p>
+          <h2 class="text-3xl font-bold text-slate-900">What We Offer</h2>
+          <p class="text-slate-600 mt-2">Rehabilitation built on performance.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 transition-all duration-200" aria-labelledby="service-pt">
-            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Physical Therapy</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">1-on-1 sessions with a Doctor of Physical Therapy tailored to you and the specific demands of your sport, recreation, or regular activity.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 transition-all duration-200" aria-labelledby="service-pt">
+            <h3 id="service-pt" class="font-bold text-xl mb-2 text-slate-900">Physical Therapy</h3>
+            <p class="text-slate-600 text-sm">1-on-1 sessions with a Doctor of Physical Therapy tailored to you and the specific demands of your sport, recreation, or regular activity.</p>
           </article>
 
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 transition-all duration-200" aria-labelledby="service-bio">
-            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Athletic Screening</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">Whether it's preseason, postseason, or in season, a dual-credentialed Doctor of Physical Therapy and Strength and Conditioning Specialist can help you identify key performance indicators and achieve your best results.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 transition-all duration-200" aria-labelledby="service-bio">
+            <h3 id="service-bio" class="font-bold text-xl mb-2 text-slate-900">Athletic Screening</h3>
+            <p class="text-slate-600 text-sm">Whether it's preseason, postseason, or in season, a dual-credentialed Doctor of Physical Therapy and Strength and Conditioning Specialist can help you identify key performance indicators and achieve your best results.</p>
           </article>
           
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 transition-all duration-200" aria-labelledby="service-rts">
-            <h3 id="service-rts" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Return-to-Sport</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">Comprehensive assessments after injury using advanced testing gear, including force plate metrics, designed to get you back to full activity safely and confidently.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 transition-all duration-200" aria-labelledby="service-rts">
+            <h3 id="service-rts" class="font-bold text-xl mb-2 text-slate-900">Return-to-Sport</h3>
+            <p class="text-slate-600 text-sm">Comprehensive assessments after injury using advanced testing gear, including force plate metrics, designed to get you back to full activity safely and confidently.</p>
           </article>
 
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 transition-all duration-200" aria-labelledby="service-recovery">
-            <h3 id="service-recovery" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Recovery</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">Modeled after high level training rooms, Matador has the tools to help you recover faster. Available with all Physical Therapy appointments or as a cash-based subscription.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 transition-all duration-200" aria-labelledby="service-recovery">
+            <h3 id="service-recovery" class="font-bold text-xl mb-2 text-slate-900">Recovery</h3>
+            <p class="text-slate-600 text-sm">Modeled after high level training rooms, Matador has the tools to help you recover faster. Available with all Physical Therapy appointments or as a cash-based subscription.</p>
           </article>
 
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 transition-all duration-200 md:col-span-2 md:max-auto md:w-[calc(50%-1rem)] md:justify-self-center" aria-labelledby="service-dn">
-            <h3 id="service-dn" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Dry Needling</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">Manage pain better with dry needling to get you back to activity faster than ever. Available with all Physical Therapy appointments or as a standalone cash-based service.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 transition-all duration-200 md:col-span-2 md:max-auto md:w-[calc(50%-1rem)] md:justify-self-center" aria-labelledby="service-dn">
+            <h3 id="service-dn" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
+            <p class="text-slate-600 text-sm">Manage pain better with dry needling to get you back to activity faster than ever. Available with all Physical Therapy appointments or as a standalone cash-based service.</p>
           </article>
         </div>
       </div>
     </section>
       
     <!-- Concussion Section -->
-    <section id="brain" class="w-full py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">
+    <section id="brain" class="w-full py-12 bg-slate-50 border-t border-slate-200 scroll-mt-20">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8 text-slate-900 dark:text-slate-100">Concussion Rehabilitation</h2>
-        <div class="max-w-3xl mx-auto space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+        <h2 class="text-3xl font-bold text-center mb-8 text-slate-900">Concussion Rehabilitation</h2>
+        <div class="max-w-3xl mx-auto space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
           <p>Finding the right care for a concussion can be intimidating. At Matador, our Physical Therapist has the additional training and equipment to guide you through the recovery process to safely return to full activity.</p>  
           <p>Whether you took a hard hit in a football game, experienced a motor vehicle accident, or had an injury years ago you still feel is affecting you, being assessed for a concussion can give you the direction and peace of mind you need.</p> 
         </div>
@@ -234,34 +198,34 @@
     </section>
 
     <!-- Cash Pricing Section -->
-    <section id="pricing" class="w-full py-12 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">
+    <section id="pricing" class="w-full py-12 bg-white border-t border-slate-200 scroll-mt-20">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center max-w-xl mx-auto mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Cash Pricing</h2>
+          <h2 class="text-3xl font-bold text-slate-900">Cash Pricing</h2>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 shadow-sm transition-all duration-200" aria-labelledby="price-eval">
-            <h3 id="price-eval" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Evaluation</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">45-minute 1-on-1 assessment. Available for Physical Therapy, Return-to-Sport, and Athletic Screening.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 shadow-sm transition-all duration-200" aria-labelledby="price-eval">
+            <h3 id="price-eval" class="font-bold text-xl mb-2 text-slate-900">Evaluation</h3>
+            <p class="text-slate-600 text-sm mb-4">45-minute 1-on-1 assessment. Available for Physical Therapy, Return-to-Sport, and Athletic Screening.</p>
             <span class="text-[#c69c6d] font-semibold text-sm">$155</span>
           </article>
 
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 shadow-sm transition-all duration-200" aria-labelledby="price-bio">
-            <h3 id="price-bio" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Physical Therapy Appointment</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">45-minute 1-on-1 sessions. Evaluation needed.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 shadow-sm transition-all duration-200" aria-labelledby="price-bio">
+            <h3 id="price-bio" class="font-bold text-xl mb-2 text-slate-900">Physical Therapy Appointment</h3>
+            <p class="text-slate-600 text-sm mb-4">45-minute 1-on-1 sessions. Evaluation needed.</p>
             <span class="text-[#c69c6d] font-semibold text-sm">$125</span>
           </article>
 
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 shadow-sm transition-all duration-200" aria-labelledby="price-recovery">
-            <h3 id="price-recovery" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Recovery Membership</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Use Normatec compression or MarcPro electrical stimulation to improve your recovery. 8 20-minute sessions per calendar month, charged monthly.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 shadow-sm transition-all duration-200" aria-labelledby="price-recovery">
+            <h3 id="price-recovery" class="font-bold text-xl mb-2 text-slate-900">Recovery Membership</h3>
+            <p class="text-slate-600 text-sm mb-4">Use Normatec compression or MarcPro electrical stimulation to improve your recovery. 8 20-minute sessions per calendar month, charged monthly.</p>
             <span class="text-[#c69c6d] font-semibold text-sm">$100</span>
           </article>
 
-          <article class="border border-slate-300 dark:border-slate-800 rounded-xl p-6 bg-slate-50 dark:bg-slate-950 shadow-sm transition-all duration-200" aria-labelledby="price-needling">
-            <h3 id="price-needling" class="font-bold text-xl mb-2 text-slate-900 dark:text-slate-100">Dry Needling</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">20-30-minute sessions, personalized to your needs. Evaluation needed.</p>
+          <article class="border border-slate-300 rounded-xl p-6 bg-slate-50 shadow-sm transition-all duration-200" aria-labelledby="price-needling">
+            <h3 id="price-needling" class="font-bold text-xl mb-2 text-slate-900">Dry Needling</h3>
+            <p class="text-slate-600 text-sm mb-4">20-30-minute sessions, personalized to your needs. Evaluation needed.</p>
             <span class="text-[#c69c6d] font-semibold text-sm">$60</span>
           </article>
         </div>
@@ -269,41 +233,41 @@
     </section>
 
     <!-- Insurance Section -->
-    <section id="insurance" class="w-full py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">
+    <section id="insurance" class="w-full py-12 bg-slate-50 border-t border-slate-200 scroll-mt-20">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center max-w-xl mx-auto mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Insurance: Coming Soon</h2>
-          <p class="text-base italic text-slate-700 dark:text-slate-300 mt-2">We are currently credentialing with the following insurance providers and will update this list as they become active.</p>
+          <h2 class="text-3xl font-bold text-slate-900">Insurance: Coming Soon</h2>
+          <p class="text-base italic text-slate-700 mt-2">We are currently credentialing with the following insurance providers and will update this list as they become active.</p>
         </div>
 
         <div class="flex flex-wrap justify-center gap-6">
-          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-select">
-            <h3 id="ins-select" class="text-xl text-slate-900 dark:text-slate-100 m-0 leading-tight">Select Health</h3>
+          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 rounded-xl bg-white flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-select">
+            <h3 id="ins-select" class="text-xl text-slate-900 m-0 leading-tight">Select Health</h3>
           </article>
 
-          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-stluke">
-            <h3 id="ins-stluke" class="text-xl text-slate-900 dark:text-slate-100 m-0 leading-tight">St Luke's Health Plan</h3>
+          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 rounded-xl bg-white flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-stluke">
+            <h3 id="ins-stluke" class="text-xl text-slate-900 m-0 leading-tight">St Luke's Health Plan</h3>
           </article>
 
-          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-bcbs">
-            <h3 id="ins-bcbs" class="text-xl text-slate-900 dark:text-slate-100 m-0 leading-tight">Blue Cross Blue Shield</h3>
+          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 rounded-xl bg-white flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-bcbs">
+            <h3 id="ins-bcbs" class="text-xl text-slate-900 m-0 leading-tight">Blue Cross Blue Shield</h3>
           </article>
 
-          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-auto">
-            <h3 id="ins-auto" class="text-xl text-slate-900 dark:text-slate-100 m-0 leading-tight">Auto</h3>
+          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 rounded-xl bg-white flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-auto">
+            <h3 id="ins-auto" class="text-xl text-slate-900 m-0 leading-tight">Auto</h3>
           </article>
 
-          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-pacific">
-            <h3 id="ins-pacific" class="text-xl text-slate-900 dark:text-slate-100 m-0 leading-tight">Pacific Source</h3>
+          <article class="w-full sm:w-64 md:w-72 h-28 border border-slate-300 rounded-xl bg-white flex items-center justify-center p-2 text-center shadow-sm transition-all duration-200" aria-labelledby="ins-pacific">
+            <h3 id="ins-pacific" class="text-xl text-slate-900 m-0 leading-tight">Pacific Source</h3>
           </article>
         </div>
       </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="w-full py-12 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">
+    <section id="about" class="w-full py-12 bg-white border-t border-slate-200 scroll-mt-20">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-8 text-slate-900 dark:text-slate-100">About Us</h2>
+        <h2 class="text-3xl font-bold text-center mb-8 text-slate-900">About Us</h2>
         
         <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
           <div class="w-full md:w-72 lg:w-80 shrink-0">
@@ -312,7 +276,7 @@
             </div>
           </div>
             
-          <div class="flex-1 space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+          <div class="flex-1 space-y-4 text-slate-600 leading-relaxed text-sm md:text-base">
             <p>Colby is a Doctor of Physical Therapy, Certified Strength and Conditioning Specialist, and Doctoral Candidate. He graduated with his Bachelor’s from Utah Valley University in 2019 and his Doctor of Physical Therapy (DPT) from Texas Tech University Health Sciences Center in 2023. He continues to attend Texas Tech pursuing his Doctoral of Science (Sc.D) in Rehabilitation Sciences with a research emphasis on return to sport assessments.</p>
             <p>Colby has extensive training in multiple aspects of athlete management, including targeted rehabilitation, strength training, sport-specific key performance indicator assessments, and post-concussion evaluation and treatment. Based heavily in athlete performance, he approaches rehabilitation and training with a blend of sport science, objective performance metrics, and comprehensive return to sport programming.</p>  
             <p>In his free time, Colby enjoys spending time with his wife Liz, his son Neil, and his dog Rex. He enjoys spending time outdoors, hiking, and going on road trips. He is also an avid fan of multiple sports and loves helping athletes reach their potential and compete at their best.</p>
@@ -322,14 +286,14 @@
     </section>
       
     <!-- Contact Section -->
-    <section id="contact" class="w-full py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">
+    <section id="contact" class="w-full py-12 bg-slate-50 border-t border-slate-200 scroll-mt-20">
       <div class="max-w-5xl mx-auto px-6">
         <div class="bg-[#c69c6d] rounded-2xl p-8 md:p-12 shadow-lg">
           <div class="max-w-xl">
             <h2 class="text-3xl font-bold mb-6 text-black">Contact Information</h2>
             <div class="space-y-6 text-white">
               <div>
-                <p class="text-black uppercase tracking-wider opacity-80">Phone</p>
+                <p class="text-black uppercase text-bold tracking-wider opacity-80">Phone</p>
                 <a href="tel:+12086140329" onclick="return confirm('Would you like to call or text (208) 614-0329?');" class="font-semibold text-xl hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded">
                   (208) 614-0329
                 </a>
@@ -337,7 +301,7 @@
               </div>
 
               <div>
-                <p class="text-black uppercase tracking-wider opacity-80">Location</p>
+                <p class="text-black uppercase text-bold tracking-wider opacity-80">Location</p>
                 <a href="https://maps.google.com/?q=1227+N+Galleria+Dr,+Nampa,+ID+83687" onclick="return confirm('Would you like to open this address in Google Maps?');" target="_blank" rel="noopener noreferrer" class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded block">
                   1227 N Galleria Dr, Nampa, ID 83687
                 </a>
@@ -345,14 +309,14 @@
               </div>
 
               <div>
-                <p class="text-black uppercase tracking-wider opacity-80">Email</p>
+                <p class="text-black uppercase text-bold tracking-wider opacity-80">Email</p>
                 <a href="mailto:info@matadorpt.com" onclick="return confirm('Would you like to open your email app to send a message to info@matadorpt.com?');" class="font-semibold text-lg hover:underline focus:outline-none focus:ring-1 focus:ring-white rounded">
                   info@matadorpt.com
                 </a>
               </div>
 
               <div>
-                <p class="text-black uppercase tracking-wider opacity-80">Fax</p>
+                <p class="text-black uppercase text-bold tracking-wider opacity-80">Fax</p>
                 <p class="font-semibold text-lg">(208) 475-5973</p>
               </div>
             </div>
@@ -362,7 +326,7 @@
     </section>
             
     <!-- Book Now Section -->
-    <section id="book" class="w-full py-12 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 scroll-mt-20 transition-colors duration-200">         
+    <section id="book" class="w-full py-12 bg-white border-t border-slate-200 scroll-mt-20">         
       <div class="max-w-5xl mx-auto px-6">
         <div class="bg-[#1a1a1a] text-white py-16 px-6 text-center rounded-2xl shadow-xl">
           <div class="max-w-2xl mx-auto space-y-6">
@@ -382,7 +346,7 @@
 
   </main>
 
-  <footer class="w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 transition-colors duration-200">
+  <footer class="w-full bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
     <div class="max-w-5xl mx-auto px-6">
       &copy; 2026 Matador Physical Therapy & Performance. All rights reserved. 1227 N Galleria Dr, Nampa, ID 83687.
     </div>
@@ -403,7 +367,6 @@
       window.history.replaceState(null, null, window.location.pathname);
     }
 
-    // Mobile Navigation Logic
     const menu = document.getElementById('mobile-menu');
     const btn = document.getElementById('menu-btn');
 
@@ -429,37 +392,6 @@
         }
       });
     }
-
-    // Dark Mode Script (Handles Desktop & Mobile Buttons)
-    const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
-    const sunIcons = [document.getElementById('theme-toggle-sun-icon'), document.querySelector('.sun-icon-m')];
-    const moonIcons = [document.getElementById('theme-toggle-moon-icon'), document.querySelector('.moon-icon-m')];
-
-    function updateIcons(isDark) {
-      sunIcons.forEach(icon => icon && icon.classList.toggle('hidden', !isDark));
-      moonIcons.forEach(icon => icon && icon.classList.toggle('hidden', isDark));
-    }
-
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const currentTheme = localStorage.getItem('color-theme');
-
-    if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-      document.documentElement.classList.add('dark');
-      updateIcons(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      updateIcons(false);
-    }
-
-    themeToggleBtns.forEach(btn => {
-      if (btn) {
-        btn.addEventListener('click', () => {
-          const isDark = document.documentElement.classList.toggle('dark');
-          localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
-          updateIcons(isDark);
-        });
-      }
-    });
   </script>
 </body>
 </html>
